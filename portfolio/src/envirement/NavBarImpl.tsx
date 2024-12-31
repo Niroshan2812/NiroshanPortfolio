@@ -1,4 +1,5 @@
 import React from "react";
+import {Link} from "react-router-dom";
 
 function NavBarImpl(){
     const [isMenuOpen, setIsMenuOpen] = React.useState(false);
@@ -28,30 +29,34 @@ function NavBarImpl(){
         {/* Dropdown Menu */}
         {isMenuOpen && (
           <div className="absolute right-0 mt-2 bg-white dark:bg-gray-800 shadow-md rounded-md w-40">
-            <a
-              href="#home"
-              className="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-700 text-sm"
-            >
-              Home
-            </a>
-            <a
-              href="#about"
-              className="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-700 text-sm"
-            >
-              About
-            </a>
-            <a
-              href="#portfolio"
-              className="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-700 text-sm"
-            >
-              Portfolio
-            </a>
-            <a
-              href="#contact"
-              className="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-700 text-sm"
-            >
-              Contact
-            </a>
+            <Link
+            to="/"
+            className="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-700 text-sm"
+            onClick={() => setIsMenuOpen(false)}
+          >
+            Home
+          </Link>
+          <Link
+            to="/about"
+            className="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-700 text-sm"
+            onClick={() => setIsMenuOpen(false)}
+          >
+            About
+          </Link>
+          <Link
+            to="/portfolio"
+            className="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-700 text-sm"
+            onClick={() => setIsMenuOpen(false)}
+          >
+            Portfolio
+          </Link>
+          <Link
+            to="/contact"
+            className="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-700 text-sm"
+            onClick={() => setIsMenuOpen(false)}
+          >
+            Contact
+          </Link>
           </div>
         )}
       </div>
