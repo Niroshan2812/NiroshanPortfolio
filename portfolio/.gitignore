@@ -1,3 +1,9 @@
+
+# Ignore constants folder
+src/constants/personal/
+
+
+
 # Logs
 logs
 *.log

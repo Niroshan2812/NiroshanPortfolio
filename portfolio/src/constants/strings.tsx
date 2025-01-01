@@ -1,8 +1,9 @@
 const Strings={
-    FROM:{
-        NAME:"Niroshan",
-        EMAIL:"Niroshan9812@gmail.com",
-        PHONE:"+94701169644",
+    NAVIGATION:{
+        HOME:"Home",
+        ABOUT:"About",
+        SERVICES:"Services",
+        CONTACT:"Contact",
     },
     BUTTON:{
         SUBMIT:"Submit",
