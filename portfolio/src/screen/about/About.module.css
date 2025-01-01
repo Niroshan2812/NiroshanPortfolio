@@ -1,0 +1,16 @@
+.aboutmainContainner{
+    @apply min-h-screen p-6
+}
+.h1heading{
+    @apply text-4xl font-bold mb-6
+}
+.hrview{
+    @apply h-1  mb-6
+}
+.h2subheading{
+    @apply text-2xl font-semibold mb-4
+
+}
+.pstyling{
+    @apply leading-relaxed mb-6
+}
