@@ -1,10 +1,10 @@
 import { useState } from 'react'
 import{ BrowserRouter as Router, Route, Routes  } from 'react-router-dom'
 import Layout from './envirement/Layout'
-import About from './screen/About'
-import Contact from './screen/Contact'
-import Portfolio from './screen/Portfolio'
-import Home from './home/Home'
+import About from './screen/about/About'
+import Contact from './screen/contact/Contact'
+import Portfolio from './screen/portfolio/Portfolio'
+import Home from './screen/home/Home'
 
 import './App.css'
 
