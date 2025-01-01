@@ -1,3 +1,20 @@
-.title{
-    @apply text-4xl font-bold rounded-md;
+
+.maincontainer{
+    @apply mx-auto flex h-screen;
+}
+.leftcontainer{
+    @apply flex flex-col flex-1 align-bottom items-center justify-center ;
+}
+.rightcontainer{
+    @apply flex-1 bg-cover bg-center;
+}
+.nameContainner{
+    @apply text-4xl font-thin font-mono truncate  ;
+}
+.nameContainnerSpan{
+    @apply text-cyan-200 hover:text-cyan-900 border-collapse ;
+}
+.detailContainner{
+    
+@apply p-4 text-base hover:text-lg font-thin font-mono text-gray-500;
 }
