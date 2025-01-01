@@ -1,0 +1,25 @@
+.maincontainer{
+    @apply  flex flex-col items-center justify-center min-h-screen p-6;
+}
+
+.mainH2{
+    @apply text-4xl font-sans font-mono truncate mb-4  ;
+}
+.secH2{
+    @apply text-2xl font-thin font-mono  truncate mb-2  ;
+}
+.formContainer{
+    @apply bg-slate-700 opacity-90 shadow-md rounded-lg w-auto  p-10 m-12;
+}
+.hrLine{
+   @apply w-64 h-0.5 mx-auto my-4 bg-gray-500 border-0 rounded md:my-10 dark:bg-gray-700
+}
+.lableFiled{
+    @apply block text-lg font-medium mb-2;
+}
+.inputFiled{
+    @apply w-full border border-gray-300 rounded-md px-4 py-2 text-gray-700 text-lg focus:outline-none focus:right-2 focus:ring-blue-500 focus:border-transparent mb-4;
+}
+.formButton{
+    @apply w-full bg-cyan-500 text-white font-medium py-2 rounded-md hover:bg-cyan-600 focus:ring-2 focus:ring-cyan-500 transition duration-300;
+}
