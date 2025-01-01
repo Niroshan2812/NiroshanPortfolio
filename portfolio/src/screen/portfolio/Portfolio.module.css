@@ -1,0 +1,48 @@
+.maincontainer{
+    @apply min-h-screen p-6;
+}
+.headingH1{
+    @apply text-4xl font-bold mb-6
+}
+.portfolioContainer{
+    @apply grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6;
+}
+.card{
+@apply bg-white shadow-md rounded-lg p-9 mt-4;
+}
+.cardTitle{
+    @apply text-xl font-semibold text-gray-700 mb-2; 
+}
+.cardDescription{
+    @apply text-gray-600 text-sm mb-4;
+}
+.cardButton{
+    @apply bg-blue-500 text-white py-2 px-4 rounded-md hover:bg-blue-700;
+}
+
+/* popup */
+
+.popup{
+    @apply fixed inset-0 bg-gray-800 bg-opacity-50 flex items-center justify-center;
+}
+.popupContent{
+    @apply bg-white rounded-lg shadow-md p-6 w-full max-w-lg relative;
+}
+.closeButton{
+    @apply absolute top-2 right-2 text-gray-700 cursor-pointer hover:text-gray-900;
+}
+.popupTitle{
+    @apply text-2xl font-semibold text-gray-700 mb-6;
+}
+.popupDescription{
+    @apply text-gray-600 text-sm mb-6;
+}
+.imageContainner{
+    @apply grid grid-cols-1 sm:grid-cols-2 gap-4 mb-4;
+}
+.popupImage{
+    @apply w-full rounded-md;
+}
+.popupButton{
+    @apply bg-gray-500 text-white py-2 px-4 rounded-md hover:bg-gray-700;
+}
