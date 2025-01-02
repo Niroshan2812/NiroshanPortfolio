@@ -1,9 +1,19 @@
 import React, { useEffect } from "react";
 import styles from "./Portfolio.module.css";
 
+type project = {
+    id: number;
+    name: string;
+    shortDescription: string;
+    description: string;
+    images: string[];
+    url: string;
+}
+
+
 function Portfolio() {
-    const [projects, setProjects] = React.useState([]);
-    const [selectedProject, setSelectedProject] = React.useState(null);
+    const [projects, setProjects] = React.useState<project[]>([]);
+    const [selectedProject, setSelectedProject] = React.useState<project | null>(null);
 
     useEffect(()=>{
         const fetchProjects = async () => {
@@ -14,7 +24,7 @@ function Portfolio() {
         fetchProjects();
     },[]);
 
-    const handleCardClick= (project)=>{
+    const handleCardClick= (project: project)=>{
         setSelectedProject(project);
     }
     const handleClosePopup =()=>{
