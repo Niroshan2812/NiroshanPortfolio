@@ -36,5 +36,15 @@ public class PortfolioSearviceImpl implements PortfolioSearvice {
                 .collect(Collectors.toList());
     }
 
-    //
+    // get portfolio by id
+    @Override
+    public PotfolioDto getPortfolioById(Long id) {
+        Portfolio portfolio = portfolioRepository.findById(id).orElseThrow(
+                ()-> new RuntimeException("Portfolio not found with id: " + id )
+        );
+
+        return PortfolioMapping.maptoPotfolioDto(portfolio);
+    }
+
+
 }

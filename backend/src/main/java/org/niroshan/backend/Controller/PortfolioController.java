@@ -24,4 +24,9 @@ public class PortfolioController {
     public List<PotfolioDto> getAllPortfolios() {
         return portfolioSearvice.getPortfolios();
     }
+
+    @GetMapping("/{id}")
+    public PotfolioDto findPortfolioById(@PathVariable Long id){
+        return portfolioSearvice.getPortfolioById(id);
+    }
 }
