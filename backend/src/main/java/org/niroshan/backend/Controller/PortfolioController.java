@@ -29,4 +29,14 @@ public class PortfolioController {
     public PotfolioDto findPortfolioById(@PathVariable Long id){
         return portfolioSearvice.getPortfolioById(id);
     }
+    
+    @PutMapping("/{id}")
+    public PotfolioDto updatePortfolio(@PathVariable Long id,@RequestBody PotfolioDto portfolioDto) {
+        return portfolioSearvice.updatePortfolio(id, portfolioDto);
+    }
+
+    @DeleteMapping("/{id}")
+    public void deletePortfolio(@PathVariable Long id){
+        portfolioSearvice.deletePortfolio(id);
+    }
 }

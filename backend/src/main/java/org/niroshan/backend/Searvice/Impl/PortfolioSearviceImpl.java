@@ -46,5 +46,27 @@ public class PortfolioSearviceImpl implements PortfolioSearvice {
         return PortfolioMapping.maptoPotfolioDto(portfolio);
     }
 
+    //update portfolio by given id
+    @Override
+    public PotfolioDto updatePortfolio(Long id, PotfolioDto portfolioDto) {
+        Portfolio portfolioEntity = portfolioRepository.findById(id).orElseThrow(
+                ()-> new RuntimeException("Portfolio not found with id: " + id )
+        );
+        portfolioEntity.setShortDescription(portfolioDto.getShortDescription());
+        portfolioEntity.setDescription(portfolioDto.getDescription());
+        portfolioEntity.setGithubLink(portfolioDto.getGithubLink());
+        Portfolio UpdatedPortfolio = portfolioRepository.save(portfolioEntity);
+        return PortfolioMapping.maptoPotfolioDto(UpdatedPortfolio);
+    }
+
+    //Delete portfolio
+    @Override
+    public void deletePortfolio(Long id) {
+        Portfolio portfolio = portfolioRepository.findById(id).orElseThrow(
+                ()->new RuntimeException("Portfolio not found with id: " + id )
+        );
+        portfolioRepository.delete(portfolio);
+    }
+
 
 }
