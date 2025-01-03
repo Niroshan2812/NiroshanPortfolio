@@ -20,7 +20,7 @@ function Home() {
           <h3 className={styles.detailContainner}> {Strings.EXPREANCE.TITLE}
           </h3>
           <div className={styles.buttoncontainnner}>
-            <a href="#_" className={`${styles.hrfcontainner} group`}>
+            <a href="/about" className={`${styles.hrfcontainner} group`}>
               <span className={`${styles.spancontainner} group-hover:h-full`}></span>
               <span className={`${styles.secondspancontainner} group-hover:translate-x-12`}>
                 <svg
@@ -66,16 +66,16 @@ function Home() {
 
         <div className={styles.thirdDiv}>
           <div className={styles.thirdDivContainer}>
-            <a href="https://www.linkedin.com/in/niroshan-dharmasiri-0a1b3b1b4/" target="_blank" rel="noopener noreferrer" className={styles.iconContainer}>
+            <a href={PersonalString.SOCIALlINKS.LINKDIN} target="_blank" rel="noopener noreferrer" className={styles.iconContainer}>
               <FaLinkedin className={styles.icon} />
             </a>
-            <a href="https://www.linkedin.com/in/niroshan-dharmasiri-0a1b3b1b4/" target="_blank" rel="noopener noreferrer" className={styles.iconContainer}>
+            <a href={PersonalString.SOCIALlINKS.GITHUB} target="_blank" rel="noopener noreferrer" className={styles.iconContainer}>
               <FaGithub className={styles.icon} />
             </a>
-            <a href="https://www.linkedin.com/in/niroshan-dharmasiri-0a1b3b1b4/" target="_blank" rel="noopener noreferrer"className={styles.iconContainer}>
+            <a href={PersonalString.SOCIALlINKS.FACEBOOK} target="_blank" rel="noopener noreferrer"className={styles.iconContainer}>
               <FaFacebook className={styles.icon} />
             </a>
-            <a href="https://www.linkedin.com/in/niroshan-dharmasiri-0a1b3b1b4/" target="_blank" rel="noopener noreferrer" className={styles.iconContainer}>
+            <a href={PersonalString.SOCIALlINKS.INSTERGRAM} target="_blank" rel="noopener noreferrer" className={styles.iconContainer}>
               <FaInstagram className={styles.icon} />
             </a>
            

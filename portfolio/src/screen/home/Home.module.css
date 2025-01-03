@@ -1,3 +1,40 @@
+@media(max-width: 1024px){
+  .maincontainer {
+    flex-direction: column;
+    padding: 20px;
+  }
+  .leftcontainer, .rightcontainer {
+    flex: none;
+    width: 100%;
+    text-align: center;
+  }
+  .imgStyling {
+    height: auto;
+    width: 100%;
+    margin: 0 auto;
+  }
+}
+@media (max-width: 768px) {
+  .nameContainner {
+    font-size: 2.5rem;
+  }
+  .detailContainner {
+    font-size: 1rem;
+  }
+  .thirdDivContainer {
+    right: 2%;
+  }
+}
+
+@media (max-width: 480px) {
+  .buttoncontainnner {
+    flex-direction: column;
+    gap: 10px;
+  }
+  .iconContainer {
+    font-size: 1.5rem;
+  }
+}
 
 .maincontainer{
     @apply mx-auto flex h-screen;
@@ -23,10 +60,12 @@
 }
 .nameContainner{
     @apply text-5xl font-thin font-mono truncate  ;
-}
+    font-size: clamp(1.5rem, 5vw, 3rem);
+  }
 .nameContainnerSpan{
     @apply text-cyan-600 hover:text-cyan-900 border-collapse ;
-}
+    font-size: clamp(1.2rem, 4vw, 2.5rem);
+  }
 .detailContainner{
     
 @apply pt-10 pb-10 text-base hover:text-lg font-thin font-mono text-gray-500;

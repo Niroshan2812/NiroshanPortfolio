@@ -1,6 +1,7 @@
 
 # Ignore constants folder
 src/constants/personal/
+src/assets/personalImg
 
 
 

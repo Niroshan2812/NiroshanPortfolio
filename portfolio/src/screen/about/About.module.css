@@ -4,13 +4,20 @@
 .h1heading{
     @apply text-4xl font-bold mb-6
 }
-.hrview{
-    @apply h-1  mb-6
+.bottomcontainner{
+    @apply flex flex-col md:flex-row justify-center items-center gap-10 pt-12
 }
-.h2subheading{
-    @apply text-2xl font-semibold mb-4
+.aboutPicture{
+    @apply object-cover object-center w-full transition-all 
+    duration-700  filter rounded-lg shadow-2xl size-auto max-h-[700px] bg-opacity-10 filter grayscale hover:grayscale-0
+     shadow-blue-600/30 hover:shadow-blue-600/50;
 
 }
-.pstyling{
-    @apply leading-relaxed mb-6
+
+.aboutDetailsContainner{
+    @apply w-full md:w-1/2 md:pl-6
+
+}
+.aboutmeText{
+    @apply text-lg font-mono justify-center opacity-90 text-cyan-200 hover:text-cyan-50  
 }
