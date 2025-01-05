@@ -41,7 +41,7 @@ function Portfolio() {
                 <div key={project.id} className={styles.card} >
                     <h2 className={styles.cardTitle}>{project.name}</h2> 
                     <p className={styles.cardDescription}>{project.shortDescription}</p>
-                    <button className={styles.cardButton} onClick={()=>handleCardClick(project)}>View Project</button>
+                    <button className={styles.cardButton} onClick={()=>handleCardClick(project)}>Open in Github</button>
                 </div>
             ))}
 
