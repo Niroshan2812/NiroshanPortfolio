@@ -9,7 +9,8 @@ public class PortfolioMapping {
                 potfolioDto.getId(),
                 potfolioDto.getShortDescription(),
                 potfolioDto.getDescription(),
-                potfolioDto.getGithubLink()
+                potfolioDto.getGithubLink(),
+                potfolioDto.getImageUrls()
         );
     }
     public static PotfolioDto maptoPotfolioDto(Portfolio portfolio){
@@ -17,7 +18,9 @@ public class PortfolioMapping {
                 portfolio.getId(),
                 portfolio.getShortDescription(),
                 portfolio.getDescription(),
-                portfolio.getGithubLink()
+                portfolio.getGithubLink(),
+                portfolio.getImageUrls()
+
         );
     }
 }

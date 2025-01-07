@@ -26,16 +26,16 @@ public class PortfolioController {
     }
 
     @GetMapping("/{id}")
-    public PotfolioDto findPortfolioById(@PathVariable Long id){
+    public PotfolioDto findPortfolioById(@PathVariable String id){
         return portfolioSearvice.getPortfolioById(id);
     }
     @PutMapping("/{id}")
-    public PotfolioDto updatePortfolio(@PathVariable Long id,@RequestBody PotfolioDto portfolioDto) {
+    public PotfolioDto updatePortfolio(@PathVariable String id,@RequestBody PotfolioDto portfolioDto) {
         return portfolioSearvice.updatePortfolio(id, portfolioDto);
     }
 
     @DeleteMapping("/{id}")
-    public void deletePortfolio(@PathVariable Long id){
+    public void deletePortfolio(@PathVariable String id){
         portfolioSearvice.deletePortfolio(id);
     }
 }

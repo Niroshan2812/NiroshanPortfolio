@@ -38,7 +38,7 @@ public class PortfolioSearviceImpl implements PortfolioSearvice {
 
     // get portfolio by id
     @Override
-    public PotfolioDto getPortfolioById(Long id) {
+    public PotfolioDto getPortfolioById(String id) {
         Portfolio portfolio = portfolioRepository.findById(id).orElseThrow(
                 ()-> new RuntimeException("Portfolio not found with id: " + id )
         );
@@ -48,7 +48,7 @@ public class PortfolioSearviceImpl implements PortfolioSearvice {
 
     //update portfolio by given id
     @Override
-    public PotfolioDto updatePortfolio(Long id, PotfolioDto portfolioDto) {
+    public PotfolioDto updatePortfolio(String id, PotfolioDto portfolioDto) {
         Portfolio portfolioEntity = portfolioRepository.findById(id).orElseThrow(
                 ()-> new RuntimeException("Portfolio not found with id: " + id )
         );
@@ -61,7 +61,7 @@ public class PortfolioSearviceImpl implements PortfolioSearvice {
 
     //Delete portfolio
     @Override
-    public void deletePortfolio(Long id) {
+    public void deletePortfolio(String id) {
         Portfolio portfolio = portfolioRepository.findById(id).orElseThrow(
                 ()->new RuntimeException("Portfolio not found with id: " + id )
         );

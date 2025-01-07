@@ -3,25 +3,30 @@ package org.niroshan.backend.Model;
 import org.springframework.data.annotation.Id;
 import org.springframework.data.mongodb.core.mapping.Document;
 
+import java.util.List;
+
 @Document(collection = "portfoliodetails")
 public class Portfolio {
     @Id
-    private Long id;
+
+    private String id;
     private String shortDescription;
     private String description;
     private String githubLink;
+    private List<String> imageUrls;
 
-    public Portfolio(Long id, String shortDescription, String description, String githubLink) {
+    public Portfolio(String id, String shortDescription, String description, String githubLink, List<String> imageUrls) {
         this.id = id;
         this.shortDescription = shortDescription;
         this.description = description;
         this.githubLink = githubLink;
+        this.imageUrls = imageUrls;
     }
 
     public Portfolio() {
     }
 
-    public Long getId() {
+    public String getId() {
         return this.id;
     }
 
@@ -37,7 +42,7 @@ public class Portfolio {
         return this.githubLink;
     }
 
-    public void setId(Long id) {
+    public void setId(String id) {
         this.id = id;
     }
 
@@ -51,6 +56,14 @@ public class Portfolio {
 
     public void setGithubLink(String githubLink) {
         this.githubLink = githubLink;
+    }
+
+    public List<String> getImageUrls() {
+        return imageUrls;
+    }
+
+    public void setImageUrls(List<String> imageUrls) {
+        this.imageUrls = imageUrls;
     }
 
     public boolean equals(final Object o) {
@@ -73,11 +86,29 @@ public class Portfolio {
         final Object other$githubLink = other.getGithubLink();
         if (this$githubLink == null ? other$githubLink != null : !this$githubLink.equals(other$githubLink))
             return false;
+        final Object this$imageUrls = this.getImageUrls();
+        final Object other$imageUrls = other.getImageUrls();
+        if (this$imageUrls == null ? other$imageUrls != null : !this$imageUrls.equals(other$imageUrls)) {
+            return false;
+
+
+        }
         return true;
     }
 
     protected boolean canEqual(final Object other) {
         return other instanceof Portfolio;
+    }
+
+    @Override
+    public String toString() {
+        return "Portfolio{" +
+                "id=" + id +
+                ", shortDescription='" + shortDescription + '\'' +
+                ", description='" + description + '\'' +
+                ", githubLink='" + githubLink + '\'' +
+                ", imageUrls=" + imageUrls +
+                '}';
     }
 
     public int hashCode() {
@@ -91,10 +122,11 @@ public class Portfolio {
         result = result * PRIME + ($description == null ? 43 : $description.hashCode());
         final Object $githubLink = this.getGithubLink();
         result = result * PRIME + ($githubLink == null ? 43 : $githubLink.hashCode());
+        final Object $imageUrls = this.getImageUrls();
+        result = result * PRIME + ($imageUrls == null ? 43 : $imageUrls.hashCode());
         return result;
+
+
     }
 
-    public String toString() {
-        return "Portfolio(id=" + this.getId() + ", shortDescription=" + this.getShortDescription() + ", description=" + this.getDescription() + ", githubLink=" + this.getGithubLink() + ")";
-    }
 }

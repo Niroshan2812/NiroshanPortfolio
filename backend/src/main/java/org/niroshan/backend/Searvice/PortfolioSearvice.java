@@ -7,7 +7,7 @@ import java.util.List;
 public interface PortfolioSearvice {
     PotfolioDto savePortfolio(PotfolioDto portfolio);
     List<PotfolioDto> getPortfolios();
-    PotfolioDto getPortfolioById(Long id);
-    PotfolioDto updatePortfolio(Long id, PotfolioDto portfolioDto);
-    void deletePortfolio(Long id);
+    PotfolioDto getPortfolioById(String id);
+    PotfolioDto updatePortfolio(String id, PotfolioDto portfolioDto);
+    void deletePortfolio(String id);
 }
