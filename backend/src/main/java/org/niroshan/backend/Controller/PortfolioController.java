@@ -20,6 +20,7 @@ public class PortfolioController {
         return portfolioSearvice.savePortfolio(portfolioDto);
     }
 
+    @CrossOrigin(origins = "http://localhost:5173")
     @GetMapping
     public List<PotfolioDto> getAllPortfolios() {
         return portfolioSearvice.getPortfolios();

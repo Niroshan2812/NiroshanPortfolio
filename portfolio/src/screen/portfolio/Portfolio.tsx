@@ -2,12 +2,12 @@ import React, { useEffect } from "react";
 import styles from "./Portfolio.module.css";
 
 type project = {
-    id: number;
+    id: string;
     name: string;
     shortDescription: string;
     description: string;
-    images: string[];
-    url: string;
+    githubLink: string;
+    imageUrls: string[];
 }
 
 
@@ -17,9 +17,19 @@ function Portfolio() {
 
     useEffect(()=>{
         const fetchProjects = async () => {
-        const responce = await fetch("projects.json");
-        const data = await responce.json();
-        setProjects(data);
+            try {
+                const responce =  await fetch ("http://localhost:8080/api/portfolio");
+                if(!responce.ok){
+                    throw new Error("failed to fetch data");
+                    
+                }
+                const data = await responce.json();
+                setProjects(data);
+                console.log(projects);
+            } catch (error) {
+                console.log("Error fetching projects", error)
+            }
+        
         };
         fetchProjects();
     },[]);
@@ -41,7 +51,7 @@ function Portfolio() {
                 <div key={project.id} className={styles.card} >
                     <h2 className={styles.cardTitle}>{project.name}</h2> 
                     <p className={styles.cardDescription}>{project.shortDescription}</p>
-                    <button className={styles.cardButton} onClick={()=>handleCardClick(project)}>Open in Github</button>
+                    <button className={styles.cardButton} onClick={()=>handleCardClick(project)}>View Details</button>
                 </div>
             ))}
 
@@ -54,11 +64,11 @@ function Portfolio() {
                 <h2 className={styles.popupTitle}>{selectedProject.name}</h2>
                 <p className={styles.popupDescription}>{selectedProject.description}</p>
                 <div className={styles.imageContainner}>
-                    {selectedProject.images.map((image, index)=>(
+                    {selectedProject.imageUrls.map((image, index)=>(
                         <img key={index} src={image} alt={selectedProject.name} className={styles.popupImage}/>
                     ))}
                 </div>
-                <a href={selectedProject.url} target="_blank" rel=" noopener noreferrer" className={styles.popupButton}>View on Github</a>
+                <a href={selectedProject.githubLink} target="_blank" rel=" noopener noreferrer" className={styles.popupButton}>View on Github</a>
             </div>
 
         </div>

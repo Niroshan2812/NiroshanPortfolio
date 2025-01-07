@@ -10,13 +10,15 @@ public class Portfolio {
     @Id
 
     private String id;
+    private String name;
     private String shortDescription;
     private String description;
     private String githubLink;
     private List<String> imageUrls;
 
-    public Portfolio(String id, String shortDescription, String description, String githubLink, List<String> imageUrls) {
+    public Portfolio(String id,String name, String shortDescription, String description, String githubLink, List<String> imageUrls) {
         this.id = id;
+        this.name = name;
         this.shortDescription = shortDescription;
         this.description = description;
         this.githubLink = githubLink;
@@ -28,6 +30,14 @@ public class Portfolio {
 
     public String getId() {
         return this.id;
+    }
+
+    public String getName() {
+        return name;
+    }
+
+    public void setName(String name) {
+        this.name = name;
     }
 
     public String getShortDescription() {
@@ -74,6 +84,9 @@ public class Portfolio {
         final Object this$id = this.getId();
         final Object other$id = other.getId();
         if (this$id == null ? other$id != null : !this$id.equals(other$id)) return false;
+        final Object this$name = this.getName();
+        final Object other$name = other.getName();
+        if(this$name == null ? other$name != null : !this$name.equals(other$name)) return false;
         final Object this$shortDescription = this.getShortDescription();
         final Object other$shortDescription = other.getShortDescription();
         if (this$shortDescription == null ? other$shortDescription != null : !this$shortDescription.equals(other$shortDescription))
@@ -104,6 +117,7 @@ public class Portfolio {
     public String toString() {
         return "Portfolio{" +
                 "id=" + id +
+                "name"+name+
                 ", shortDescription='" + shortDescription + '\'' +
                 ", description='" + description + '\'' +
                 ", githubLink='" + githubLink + '\'' +
@@ -116,6 +130,8 @@ public class Portfolio {
         int result = 1;
         final Object $id = this.getId();
         result = result * PRIME + ($id == null ? 43 : $id.hashCode());
+        final Object $name = this.getName();
+        result = result * PRIME + ($name == null ? 43 : $name.hashCode());
         final Object $shortDescription = this.getShortDescription();
         result = result * PRIME + ($shortDescription == null ? 43 : $shortDescription.hashCode());
         final Object $description = this.getDescription();

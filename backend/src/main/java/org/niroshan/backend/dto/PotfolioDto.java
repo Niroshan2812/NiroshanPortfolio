@@ -4,13 +4,14 @@ import java.util.List;
 
 public class PotfolioDto {
     private String id;
+    private String name;
     private String shortDescription;
     private String description;
     private String githubLink;
     private List<String>imageUrls;
 
 
-    public PotfolioDto(String id, String shortDescription, String description, String githubLink, List<String> imageUrls) {
+    public PotfolioDto(String id,String name, String shortDescription, String description, String githubLink, List<String> imageUrls) {
         this.id = id;
         this.shortDescription = shortDescription;
         this.description = description;
@@ -27,6 +28,14 @@ public class PotfolioDto {
 
     public void setImageUrls(List<String> imageUrls) {
         this.imageUrls = imageUrls;
+    }
+
+    public String getName() {
+        return name;
+    }
+
+    public void setName(String name) {
+        this.name = name;
     }
 
     public String getId() {
@@ -69,6 +78,9 @@ public class PotfolioDto {
         final Object this$id = this.getId();
         final Object other$id = other.getId();
         if (this$id == null ? other$id != null : !this$id.equals(other$id)) return false;
+        final Object this$name = this.getName();
+        final Object other$name = other.getName();
+        if(this$name == null ? other$name != null : !this$name.equals(other$name)) return false;
         final Object this$shortDescription = this.getShortDescription();
         final Object other$shortDescription = other.getShortDescription();
         if (this$shortDescription == null ? other$shortDescription != null : !this$shortDescription.equals(other$shortDescription))
@@ -99,6 +111,8 @@ public class PotfolioDto {
         int result = 1;
         final Object $id = this.getId();
         result = result * PRIME + ($id == null ? 43 : $id.hashCode());
+        final Object $name = this.getName();
+        result = result * PRIME + ($name == null ? 43 : $name.hashCode());
         final Object $shortDescription = this.getShortDescription();
         result = result * PRIME + ($shortDescription == null ? 43 : $shortDescription.hashCode());
         final Object $description = this.getDescription();
@@ -114,6 +128,7 @@ public class PotfolioDto {
     public String toString() {
         return "PotfolioDto{" +
                 "id=" + id +
+                ", name=" + name +
                 ", shortDescription='" + shortDescription + '\'' +
                 ", description='" + description + '\'' +
                 ", githubLink='" + githubLink + '\'' +
