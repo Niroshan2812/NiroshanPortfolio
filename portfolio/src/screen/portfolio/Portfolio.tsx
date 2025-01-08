@@ -85,6 +85,7 @@ function Portfolio() {
                         <h2 className={styles.popupTitle}>{selectedProject.name}</h2>
                         <p className={styles.popupDescription}>{selectedProject.description}</p>
                         <div className={styles.imageContainner}>
+                            <div className={styles.rowimages}>
                             {selectedProject.images.map((url, index) => (
                                 <img
                                     key={index}
@@ -93,9 +94,10 @@ function Portfolio() {
                                     className={styles.popupImages}
                                 />
                             ))}
+                            </div>
                         </div>
-                        <button onClick={detailshow}>ClickMe</button>
-                        <a href="https://github.com/Niroshan2812" target="_blank" rel=" noopener noreferrer" className={styles.popupButton}>View on Github</a>
+                       
+                        <a href={selectedProject.url} target="_blank" rel=" noopener noreferrer" className={styles.popupButton}>View on Github</a>
                     </div>
 
                 </div>

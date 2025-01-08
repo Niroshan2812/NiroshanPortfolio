@@ -23,10 +23,10 @@
 /* popup */
 
 .popup{
-    @apply fixed inset-0 bg-gray-800 bg-opacity-50 flex items-center justify-center;
+    @apply fixed inset-0 bg-gray-800 bg-opacity-50 flex items-center justify-center z-50;
 }
 .popupContent{
-    @apply bg-white rounded-lg shadow-md p-6 w-full max-w-lg relative;
+    @apply bg-slate-100 rounded-lg shadow-xl p-6 max-w-3xl w-full  h-auto overflow-y-auto relative;
 }
 .closeButton{
     @apply absolute top-2 right-2 text-gray-700 cursor-pointer hover:text-gray-900;
@@ -38,11 +38,14 @@
     @apply text-gray-600 text-sm mb-6;
 }
 .imageContainner{
-    @apply grid grid-cols-1 sm:grid-cols-2 gap-4 mb-4;
+    @apply mt-4 max-w-full overflow-x-auto border border-gray-300 p-3 rounded;
 }
-.popupImage{
-    @apply w-full rounded-md;
+.rowimages{
+    @apply flex gap-4
+}
+.popupImages{
+    @apply h-96 object-cover rounded cursor-pointer transform transition-transform duration-300 hover:scale-110;
 }
 .popupButton{
-    @apply bg-gray-500 text-white py-2 px-4 rounded-md hover:bg-gray-700 cursor-pointer;
+    @apply mt-4 inline-block bg-blue-500 text-white px-4 py-2 rounded hover:bg-blue-600 transition duration-300;
 }
