@@ -1,5 +1,6 @@
 import React, { useEffect } from "react";
 import styles from "./Portfolio.module.css";
+import imgss from "../../assets/bg_img.png";
 
 type project = {
     id: string;
@@ -24,8 +25,19 @@ function Portfolio() {
                     
                 }
                 const data = await responce.json();
-                setProjects(data);
-                console.log(projects);
+                const formmattedProjects =  data.map((item:any) =>({
+                    id:item.id || Math.random(),
+                    name:item.name || "Unknown Project", 
+                    shortDescription:item.shortDescription,
+                    description:item.description, 
+                    url:item.githubLink,
+                    images: item.imageUrls.map((url:string)=>
+                    url.replace("view?usp=sharing", "uc?export=view")),
+                  
+                }));
+                console.log("formatted Project", formmattedProjects);
+                setProjects(formmattedProjects)
+               
             } catch (error) {
                 console.log("Error fetching projects", error)
             }
@@ -65,7 +77,7 @@ function Portfolio() {
                 <p className={styles.popupDescription}>{selectedProject.description}</p>
                 <div className={styles.imageContainner}>
                     {selectedProject.imageUrls.map((image, index)=>(
-                        <img key={index} src={image} alt={selectedProject.name} className={styles.popupImage}/>
+                        <img key={index} src={image} alt= {`${selectedProject.name} - ${index}`} className={styles.popupImage}/>
                     ))}
                 </div>
                 <a href={selectedProject.githubLink} target="_blank" rel=" noopener noreferrer" className={styles.popupButton}>View on Github</a>

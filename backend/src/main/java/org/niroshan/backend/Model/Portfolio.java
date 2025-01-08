@@ -117,7 +117,7 @@ public class Portfolio {
     public String toString() {
         return "Portfolio{" +
                 "id=" + id +
-                "name"+name+
+                "name"+name+'\''+
                 ", shortDescription='" + shortDescription + '\'' +
                 ", description='" + description + '\'' +
                 ", githubLink='" + githubLink + '\'' +
