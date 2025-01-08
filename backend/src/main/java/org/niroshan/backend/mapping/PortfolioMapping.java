@@ -11,7 +11,9 @@ public class PortfolioMapping {
                 potfolioDto.getShortDescription(),
                 potfolioDto.getDescription(),
                 potfolioDto.getGithubLink(),
-                potfolioDto.getImageUrls()
+                potfolioDto.getImageUrls(),
+                potfolioDto.getTechnology(),
+                potfolioDto.getTechnologyimg()
         );
     }
     public static PotfolioDto maptoPotfolioDto(Portfolio portfolio){
@@ -21,7 +23,9 @@ public class PortfolioMapping {
                 portfolio.getShortDescription(),
                 portfolio.getDescription(),
                 portfolio.getGithubLink(),
-                portfolio.getImageUrls()
+                portfolio.getImageUrls(),
+                portfolio.getTechnology(),
+                portfolio.getTechnologyimg()
 
         );
     }

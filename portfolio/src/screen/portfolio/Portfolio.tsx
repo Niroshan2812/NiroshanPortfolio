@@ -11,6 +11,9 @@ type project = {
     imageUrls: string[];
     url: string;
     images: string[];
+    tech: string[];
+    techImg: string[];
+
 }
 
 
@@ -36,6 +39,8 @@ function Portfolio() {
                     url: item.githubLink || "https://github.com",
                     images: item.imageUrls.map((url: string) =>
                         url.replace("view?usp=sharing", "uc?export=view")),
+                    techImg: item.technologyimg.map((url2: string) =>
+                        url2.replace("view?usp=sharing", "uc?export=view")),
 
                 }));
 
@@ -58,8 +63,8 @@ function Portfolio() {
     const detailshow = () => {
         const data2 = selectedProject;
         console.log(JSON.stringify(data2, null, 2));
-   
-        
+
+
 
     }
 
@@ -86,18 +91,30 @@ function Portfolio() {
                         <p className={styles.popupDescription}>{selectedProject.description}</p>
                         <div className={styles.imageContainner}>
                             <div className={styles.rowimages}>
-                            {selectedProject.images.map((url, index) => (
-                                <img
-                                    key={index}
-                                    src={url}
-                                    alt={`Project ${selectedProject.name} Image ${index + 1}`}
-                                    className={styles.popupImages}
-                                />
-                            ))}
+                                {selectedProject.images.map((url, index) => (
+                                    <img
+                                        key={index}
+                                        src={url}
+                                        alt={`Project ${selectedProject.name} Image ${index + 1}`}
+                                        className={styles.popupImages}
+                                    />
+                                ))}
                             </div>
                         </div>
-                       
-                        <a href={selectedProject.url} target="_blank" rel=" noopener noreferrer" className={styles.popupButton}>View on Github</a>
+                        <div className={styles.bottompopup}>
+                            <a href={selectedProject.url} target="_blank" rel=" noopener noreferrer" className={styles.popupButton}>View on Github</a>
+                            <div className={styles.techImg}>
+                                <div className={styles.rowimagesTech}>
+                                    {selectedProject.techImg.map((url, index) => (
+                                        <img
+                                            key={index}
+                                            src={url}
+                                            alt={`Project ${selectedProject.name} Image ${index + 1}`}
+                                            className={styles.techImage} />
+                                    ))}
+                                </div>
+                            </div>
+                        </div>
                     </div>
 
                 </div>

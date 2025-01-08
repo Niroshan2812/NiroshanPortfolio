@@ -9,17 +9,38 @@ public class PotfolioDto {
     private String description;
     private String githubLink;
     private List<String>imageUrls;
+    private List<String> technology;
+    private List<String> technologyimg;
 
 
-    public PotfolioDto(String id,String name, String shortDescription, String description, String githubLink, List<String> imageUrls) {
+    public PotfolioDto(String id,String name, String shortDescription, String description, String githubLink, List<String> imageUrls, List<String> technology, List<String> technologyimg) {
         this.id = id;
+        this.name = name;
         this.shortDescription = shortDescription;
         this.description = description;
         this.githubLink = githubLink;
         this.imageUrls = imageUrls;
+        this.technology = technology;
+        this.technologyimg = technologyimg;
     }
 
     public PotfolioDto() {
+    }
+
+    public List<String> getTechnologyimg() {
+        return technologyimg;
+    }
+
+    public void setTechnologyimg(List<String> technologyimg) {
+        this.technologyimg = technologyimg;
+    }
+
+    public List<String> getTechnology() {
+        return technology;
+    }
+
+    public void setTechnology(List<String> technology) {
+        this.technology = technology;
     }
 
     public List<String> getImageUrls() {
@@ -99,6 +120,17 @@ public class PotfolioDto {
         if (this$imageUrls == null ? other$imageUrls != null : !this$imageUrls.equals(other$imageUrls)) {
             return false;
         }
+        final Object this$technology = this.getTechnology();
+        final Object other$technology = other.getTechnology();
+        if(this$technology == null ? other$technology != null : !this$technology.equals(other$technology)){
+            return false;
+        }
+
+        final Object this$technologyimg = this.getTechnologyimg();
+        final Object other$technologyimg = other.getTechnologyimg();
+        if(this$technologyimg == null ? other$technologyimg != null : !this$technologyimg.equals(other$technologyimg)){
+            return false;
+        }
         return true;
     }
 
@@ -121,6 +153,10 @@ public class PotfolioDto {
         result = result * PRIME + ($githubLink == null ? 43 : $githubLink.hashCode());
         final Object $imageUrls = this.getImageUrls();
         result = result * PRIME + ($imageUrls == null ? 43 : $imageUrls.hashCode());
+        final Object $technology = this.getTechnology();
+        result = result * PRIME + ($technology == null ? 43 : $technology.hashCode());
+        final Object $technologyimg = this.getTechnologyimg();
+        result = result * PRIME + ($technologyimg == null ? 43 : $technologyimg.hashCode());
         return result;
     }
 
@@ -128,11 +164,13 @@ public class PotfolioDto {
     public String toString() {
         return "PotfolioDto{" +
                 "id=" + id +
-                ", name=" + name +
+                ", name=" + name + '\'' +
                 ", shortDescription='" + shortDescription + '\'' +
                 ", description='" + description + '\'' +
                 ", githubLink='" + githubLink + '\'' +
                 ", imageUrls=" + imageUrls +
+                ", technology=" + technology +
+                ", technologyimg=" + technologyimg +
                 '}';
     }
 }

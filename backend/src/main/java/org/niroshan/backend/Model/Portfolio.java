@@ -15,17 +15,37 @@ public class Portfolio {
     private String description;
     private String githubLink;
     private List<String> imageUrls;
+    private List<String> technology;
+    private List<String> technologyimg;
 
-    public Portfolio(String id,String name, String shortDescription, String description, String githubLink, List<String> imageUrls) {
+    public Portfolio(String id,String name, String shortDescription, String description, String githubLink, List<String> imageUrls, List<String> technology, List<String> technologyimg) {
         this.id = id;
         this.name = name;
         this.shortDescription = shortDescription;
         this.description = description;
         this.githubLink = githubLink;
         this.imageUrls = imageUrls;
+        this.technology = technology;
+        this.technologyimg = technologyimg;
     }
 
     public Portfolio() {
+    }
+
+    public List<String> getTechnologyimg() {
+        return technologyimg;
+    }
+
+    public void setTechnologyimg(List<String> technologyimg) {
+        this.technologyimg = technologyimg;
+    }
+
+    public List<String> getTechnology() {
+        return technology;
+    }
+
+    public void setTechnology(List<String> technology) {
+        this.technology = technology;
     }
 
     public String getId() {
@@ -106,6 +126,17 @@ public class Portfolio {
 
 
         }
+        final Object this$technology = this.getTechnology();
+        final Object other$technology = other.getTechnology();
+        if(this$technology == null ? other$technology != null : !this$technology.equals(other$technology)){
+            return false;
+        }
+
+        final Object this$technologyimg = this.getTechnologyimg();
+        final Object other$technologyimg = other.getTechnologyimg();
+        if(this$technologyimg == null ? other$technologyimg != null : !this$technologyimg.equals(other$technologyimg)){
+            return false;
+        }
         return true;
     }
 
@@ -117,11 +148,13 @@ public class Portfolio {
     public String toString() {
         return "Portfolio{" +
                 "id=" + id +
-                "name"+name+'\''+
+                ", name"+name+'\''+
                 ", shortDescription='" + shortDescription + '\'' +
                 ", description='" + description + '\'' +
                 ", githubLink='" + githubLink + '\'' +
                 ", imageUrls=" + imageUrls +
+                ", technology=" + technology +
+                ", technologyimg=" + technologyimg +
                 '}';
     }
 
@@ -140,6 +173,10 @@ public class Portfolio {
         result = result * PRIME + ($githubLink == null ? 43 : $githubLink.hashCode());
         final Object $imageUrls = this.getImageUrls();
         result = result * PRIME + ($imageUrls == null ? 43 : $imageUrls.hashCode());
+        final Object $technology = this.getTechnology();
+        result = result * PRIME + ($technology == null ? 43 : $technology.hashCode());
+        final Object $technologyimg = this.getTechnologyimg();
+        result = result * PRIME + ($technologyimg == null ? 43 : $technologyimg.hashCode());
         return result;
 
 
