@@ -2,8 +2,41 @@ import React from "react";
 import styles from "./Contact.module.css";
 import Strings from "../../constants/strings";
 import PersonalString from "../../constants/personal/personalString";
-
+import { Typewriter } from "react-simple-typewriter";
 function Contact() {
+    const codeExample = `class DeveloperMatch {
+    static class Candidate {
+        String name;
+        Set<String> skills;
+        double availability, rating;
+        Candidate(String name, Set<String> skills, double availability, double rating) {...}
+    }
+    static class Developer {...}
+    public static Candidate findBestMatch(Developer developer, List<Candidate> candidates) {
+        Candidate best = null;
+        double maxScore = 0;
+        for (Candidate c : candidates) {
+            if (c.availability > 0.5) {
+                double score = calculateScore(developer.skills, c);
+                if (score > maxScore) {
+                    maxScore = score;
+                    best = c;
+                }
+            }
+        }
+        return best;
+    }
+    private static double calculateScore(Set<String> devSkills, Candidate candidate) {
+        long matchingSkills = devSkills.stream().filter(candidate.skills::contains).count();
+        return matchingSkills * candidate.rating * candidate.availability;
+    }
+    public static void main(String[] args) {
+        Developer developer = new Developer(Set.of("Java", "Spring", "SQL"));
+        List<Candidate> candidates = List.of(...);
+        Candidate best = findBestMatch(developer, candidates);
+        System.out.println(best != null ? "Best candidate: " + best.name : "No suitable candidate found.");
+    }
+}`;
     return (
         <div className={styles.topMainContainner}>
             <div className={styles.maincontainer}>
@@ -28,7 +61,13 @@ function Contact() {
 
             </div>
               <div className={styles.secondView}>
-                    <h2></h2>
+               <div className={styles.codewriting}>
+                    <pre className={styles.preEdit}>
+                        <Typewriter words={[codeExample]} loop={1} 
+                            cursor cursorStyle="|" typeSpeed={10} delaySpeed={0}
+                        />
+                    </pre>
+               </div>
                 </div>
         </div>
     );
