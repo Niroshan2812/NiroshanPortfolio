@@ -3,7 +3,11 @@ import styles from "./Contact.module.css";
 import Strings from "../../constants/strings";
 import PersonalString from "../../constants/personal/personalString";
 import { Typewriter } from "react-simple-typewriter";
+import { useState } from "react";
 function Contact() {
+    const [formData, setFormData] = useState({ name: '', email: '', message: '' });
+    const [errors, setErrors] = useState({});
+    const [isSubmitting, setIsSubmitting] = useState(false);
     const codeExample = `class DeveloperMatch {
     static class Candidate {
         String name;
@@ -37,6 +41,12 @@ function Contact() {
         System.out.println(best != null ? "Best candidate: " + best.name : "No suitable candidate found.");
     }
 }`;
+
+const validateForm = () => {
+    const errors = {};
+    
+    return errors;
+};
     return (
         <div className={styles.topMainContainner}>
             <div className={styles.maincontainer}>
