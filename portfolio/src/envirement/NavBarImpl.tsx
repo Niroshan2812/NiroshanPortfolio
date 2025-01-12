@@ -6,7 +6,7 @@ import style from './NavBarImpl.module.css';
 function NavBarImpl() {
   return (
     <nav className="bg-gray-800 p-1">
-      <ul className="flex space-x-4">
+      <ul className="flex space-x-4 ">
         <li>
           <Link to="/" className={style.navText}>
             Home

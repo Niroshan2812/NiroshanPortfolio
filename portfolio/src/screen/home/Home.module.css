@@ -24,6 +24,11 @@
   .thirdDivContainer {
     right: 2%;
   }
+  .imgStyling {
+    height: auto;
+    width: 100%;
+    margin: 0 auto;
+  }
 }
 
 @media (max-width: 480px) {
@@ -33,6 +38,11 @@
   }
   .iconContainer {
     font-size: 1.5rem;
+  }
+  .imgStyling {
+    height: auto;
+    width: 100%;
+    margin: 0 auto;
   }
 }
 
@@ -54,8 +64,8 @@
     @apply grid min-h-[140px] w-full place-items-center rounded-lg p-6 lg:overflow-visible
 }
 .imgStyling{
-    @apply object-cover object-center w-full transition-all 
-    duration-700  filter rounded-lg shadow-2xl h-96 ml-8 pl-10 pt-8 pb-8
+    @apply object-cover object-center w-full  transition-all 
+    duration-700  filter rounded-lg shadow-2xl  h-auto  ml-8 pl-10 pt-8 pb-8
      shadow-blue-600/30 hover:shadow-blue-600/50;
 }
 .nameContainner{

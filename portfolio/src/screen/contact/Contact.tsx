@@ -99,14 +99,23 @@ function Contact() {
 
     return (
         <div className={styles.topMainContainner}>
+            
             <div className={styles.maincontainer}>
-                <h1 className={styles.mainH2}>Contact Me</h1>
-                <br />
+            <h1 className={styles.mainH2}>Contact Me</h1>
+               
+               <br />
+                
                 <form className={styles.formContainer} onSubmit={handleSubmit}>
-                    <h2 className={styles.secH2}>Get in touch</h2>
+         
                     <hr className={styles.hrLine} />
                     <label className={styles.lableFiled}>
                         {Strings.FORMDATA.EMAIL} {PersonalString.FROM.EMAIL}
+                    </label> <br />
+                    <label className={styles.lableFiled}>
+                        {Strings.FORMDATA.PHONE} {PersonalString.FROM.PHONE}
+                    </label> <br />
+                    <label className={styles.lableFiledMsg}>
+                         {PersonalString.FROM.MESSAGE}
                     </label> <br />
                     <input
                         type="text"

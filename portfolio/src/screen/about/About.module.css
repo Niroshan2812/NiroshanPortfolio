@@ -19,5 +19,5 @@
 
 }
 .aboutmeText{
-    @apply text-lg font-mono justify-center opacity-90 text-cyan-200 hover:text-cyan-50  
+    @apply text-lg font-mono justify-center opacity-90 text-cyan-200 hover:text-cyan-50  inline-block 
 }

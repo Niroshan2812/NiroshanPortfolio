@@ -8,6 +8,7 @@ function About() {
     return (
         <div className={styles.aboutmainContainner}>
             <h1 className={styles.h1heading}>About Me</h1>
+            <hr/>
             <div className={styles.bottomcontainner}>
                 <div className={styles.aboutPictureContainner}>
                     <img className={styles.aboutPicture} src={imagesd} alt="about" />
