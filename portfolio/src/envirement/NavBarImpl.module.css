@@ -1,0 +1,5 @@
+
+
+.navText{
+    @apply text-white hover:text-yellow-400 text-base m-3 font-bold 
+}

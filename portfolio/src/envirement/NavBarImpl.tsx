@@ -1,65 +1,30 @@
 import React from "react";
-import {Link} from "react-router-dom";
+import { Link } from "react-router-dom";
+import style from './NavBarImpl.module.css';
 
-function NavBarImpl(){
-    const [isMenuOpen, setIsMenuOpen] = React.useState(false);
-    return(
-        <div className="relative">
-        <button
-          className="p-2 focus:outline-none focus:ring-2 focus:ring-gray-400 rounded"
-          aria-label="Toggle Menu"
-          onClick={() => setIsMenuOpen(!isMenuOpen)}
-        >
-          <svg
-            className="w-6 h-6"
-            fill="none"
-            stroke="currentColor"
-            viewBox="0 0 24 24"
-            xmlns="http://www.w3.org/2000/svg"
-          >
-            <path
-              strokeLinecap="round"
-              strokeLinejoin="round"
-              strokeWidth="2"
-              d="M4 6h16M4 12h16M4 18h16"
-            ></path>
-          </svg>
-        </button>
 
-        {/* Dropdown Menu */}
-        {isMenuOpen && (
-          <div className="absolute right-0 mt-2 bg-white dark:bg-gray-800 shadow-md rounded-md w-40">
-            <Link
-            to="/"
-            className="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-700 text-sm"
-            onClick={() => setIsMenuOpen(false)}
-          >
+function NavBarImpl() {
+  return (
+    <nav className="bg-gray-800 p-1">
+      <ul className="flex space-x-4">
+        <li>
+          <Link to="/" className={style.navText}>
             Home
           </Link>
-          <Link
-            to="/about"
-            className="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-700 text-sm"
-            onClick={() => setIsMenuOpen(false)}
-          >
-            About
-          </Link>
-          <Link
-            to="/portfolio"
-            className="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-700 text-sm"
-            onClick={() => setIsMenuOpen(false)}
-          >
+        </li>
+        <li>
+          <Link to="/portfolio" className={style.navText}>
             Portfolio
           </Link>
-          <Link
-            to="/contact"
-            className="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-700 text-sm"
-            onClick={() => setIsMenuOpen(false)}
-          >
+        </li>
+        <li>
+          <Link to="/contact" className={style.navText}>
             Contact
           </Link>
-          </div>
-        )}
-      </div>
-    )
+        </li>
+      </ul>
+    </nav>
+  );
 }
+
 export default NavBarImpl;
