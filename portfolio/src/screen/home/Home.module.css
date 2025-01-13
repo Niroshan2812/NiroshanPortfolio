@@ -53,7 +53,7 @@
     @apply flex flex-col flex-1 align-bottom items-start justify-center ;
 }
 .rightcontainer{
-    @apply flex-1 bg-cover bg-center;
+    @apply flex justify-center items-center w-full bg-cover bg-center;
    
 }
 .thirdDiv{
@@ -78,7 +78,7 @@
   }
 .detailContainner{
     
-@apply pt-10 pb-10 text-base hover:text-lg font-thin font-mono text-gray-500;
+@apply pt-10 pb-10 text-base  font-thin font-mono text-gray-500;
 }
 .buttoncontainnner {
     @apply w-full h-fit flex items-center justify-center object-cover object-center w-fit transition-all 
