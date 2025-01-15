@@ -171,6 +171,11 @@ For any inquiries or feedback, please reach out:
 Thank you for visiting my portfolio repository! Your feedback and suggestions are highly appreciated.
 
 
+![Screenshot 2025-01-16 004814](https://github.com/user-attachments/assets/4bd3ab68-7cc6-4ab9-ae74-864d79bb24d7)![Screenshot 2025-01-16 005002](https://github.com/user-attachments/assets/e270826b-fce3-4077-b7f6-7ca8a4cd0404)
+![Screenshot 2025-01-16 004914](https://github.com/user-attachments/assets/0c8f5b1d-a936-4d7d-b7ca-e9865a54116c)
+![Screenshot 2025-01-16 004835](https://github.com/user-attachments/assets/0a9a353e-5b58-4453-9aa8-89b23fc6ff4b)
+
+![Screenshot 2025-01-16 004746](https://github.com/user-attachments/assets/feade3e5-dfa8-4457-8f4b-f17a09b62571)
 
 Preview,,
 ![image](https://github.com/user-attachments/assets/1dd655e7-235d-479f-a71f-f3add473babf)
