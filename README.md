@@ -1,20 +1,6 @@
-# Niroshan Portfolio
+# Niroshan's Portfolio
 
-This repository contains the source code for my personal portfolio website, showcasing my skills, projects, and experience. The project consists of a backend built with Spring Boot and MongoDB, and a frontend developed using React, Vite, TypeScript, and Tailwind CSS.
-
-## Table of Contents
-
-- [Features](#features)
-- [Project Structure](#project-structure)
-- [Installation Guide](#installation-guide)
-  - [Backend Setup](#backend-setup)
-  - [Frontend Setup](#frontend-setup)
-- [Usage](#usage)
-- [Technologies Used](#technologies-used)
-- [API Documentation](#api-documentation)
-- [Contributing](#contributing)
-- [License](#license)
-- [Contact](#contact)
+This repository contains the source code for personal portfolio website, showcasing my skills, projects, and experience. The project consists of a backend built with Spring Boot and MongoDB, and a frontend developed using React, Vite, TypeScript, and Tailwind CSS.
 
 ## Features
 
@@ -22,15 +8,6 @@ This repository contains the source code for my personal portfolio website, show
 - **Interactive UI**: Built with React and styled using Tailwind CSS for a responsive, modern design.
 - **Contact Form**: Allows users to send messages directly, integrated with Gmail SMTP for email communication.
 - **Scalable Architecture**: Backend powered by Spring Boot and MongoDB for efficient data management.
-
-## Project Structure
-
-```plaintext
-NiroshanPortfolio/
-|-- backend/           # Backend (Spring Boot) source code
-|-- portfolio/         # Frontend (React, Vite, TypeScript) source code
-|-- README.md          # Project documentation
-```
 
 ## Installation Guide
 
@@ -51,7 +28,9 @@ Follow the instructions below to set up and run the project locally.
    - Update the `application.properties` file with your MongoDB connection details:
 
      ```properties
-     spring.data.mongodb.uri=mongodb://localhost:27017/your-database
+     spring.data.mongodb.uri=mongodb://localhost:27017/your-database(Use MongoDB Compass)
+     spring.data.mongodb.database=DatabaseName
+    
      ```
 
 3. **Configure Gmail SMTP**:
@@ -138,21 +117,24 @@ The backend exposes the following endpoints:
   - **Payload**:
 
     ```json
-    {
-      "name": "Your Name",
-      "email": "your-email@example.com",
-      "message": "Your message here"
+      Example Format
+      {
+    "name": "Name of project",
+    "shortDescription": "Short Description",
+    "description": " Detail Descriptiom",
+    "githubLink": "https://github.com/Your repo",
+    "imageUrls": [
+    "SS for project"
+    ],
+    "technology": [
+    "React Native",
+    "JavaScript"
+    ],
+    "technologyimg": [
+    "Used Technology (PNG required )"
+    ]
     }
-    ```
 
-  - **Response**:
-
-    ```json
-    {
-      "status": "success",
-      "message": "Message sent successfully."
-    }
-    ```
 
 ## Contributing
 
